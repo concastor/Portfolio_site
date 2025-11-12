@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container">
+    <div class="homeButton">
+      <a routerLink="/">Jake Richardson</a>
+    </div>
+
+    <nav class="nav">
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+      <!-- <a routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/contact" routerLinkActive="active">Contact</a> -->
+    </nav>
+  </div>
+</header>
