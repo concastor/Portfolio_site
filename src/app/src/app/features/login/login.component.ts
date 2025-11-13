@@ -1,0 +1,36 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+
+@Component({
+  selector: 'app-login',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
+})
+export class LoginComponent {
+  password = '';
+  errorMessage = '';
+  returnUrl = '/';
+
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+    // Get the return URL from query params or default to '/'
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  onSubmit() {
+    if (this.authService.checkPassword(this.password)) {
+      this.router.navigate([this.returnUrl]);
+    } else {
+      this.errorMessage = 'Incorrect password. Please try again.';
+      this.password = '';
+    }
+  }
+}
