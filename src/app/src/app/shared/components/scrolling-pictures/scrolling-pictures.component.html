@@ -24,7 +24,11 @@
   </button>
 
   <!-- Scrollable Container -->
-  <div #scrollContainer class="scroll-container">
+  <div
+    #scrollContainer
+    class="scroll-container"
+    [style.animation-delay]="randomOffset"
+  >
     @for ( image of duplicatedImages; track image.title){
     <div class="image-card">
       <img [src]="image.url" [alt]="image.title" class="image" />
