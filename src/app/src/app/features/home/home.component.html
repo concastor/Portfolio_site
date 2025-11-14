@@ -1,1 +1,23 @@
-hey im jake
+<div class="home-container">
+  <div class="section">
+    <h1>
+      Jake is a Full-stack and AI Software Developer based in Toronto, Ontario
+    </h1>
+    <div class="subtitle">
+      He architects and develops enterprise-grade web applications, combining
+      full-stack expertise with AI innovation to solve complex problems at
+      scale.
+    </div>
+  </div>
+
+  <div class="sub-section">
+    Outside of work, He hand carves wood, builds computers, and attempts to find
+    the best restaurants in Toronto
+  </div>
+  <app-scrolling-pictures
+    [images]="carvingImages"
+    [title]="'A few of my carvings'"
+  />
+
+  <app-scrolling-pictures [images]="projectImages" [title]="'My Portfolio'" />
+</div>
