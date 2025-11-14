@@ -34,7 +34,7 @@ export class ScrollingPicturesComponent implements OnInit {
     const maxScroll = container.scrollWidth - container.clientWidth;
 
     // If we've reached the end, scroll back to the beginning
-    if (container.scrollLeft >= maxScroll - 10) {
+    if (container.scrollLeft >= maxScroll - 1) {
       container.scrollTo({
         left: 0,
         behavior: 'smooth',
