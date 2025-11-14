@@ -2,36 +2,36 @@ import { Component } from '@angular/core';
 import { ScrollingPicturesComponent } from '../../shared/components/scrolling-pictures/scrolling-pictures.component';
 
 @Component({
-    selector: 'app-home',
-    imports: [ScrollingPicturesComponent],
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.scss'
+  selector: 'app-home',
+  imports: [ScrollingPicturesComponent],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
   projectImages: any[] = [
     {
-      url: './images/cube-image.jpg',
+      url: './images/goldmine-logo-icon.png',
       title: 'Goldmine',
     },
     {
-      url: './images/steve-home.png',
+      url: './images/Steve_Steve.png',
       title: 'STEVE',
     },
     {
-      url: './images/beetok-home.png',
-      title: 'Project 3',
+      url: './images/sko_logo.png',
+      title: 'Events App',
     },
     {
-      url: './images/ultraphone-home.png',
-      title: 'Project 4',
+      url: './images/beetok_logo.png',
+      title: 'Beetok',
     },
     {
-      url: './images/sko-home.png',
-      title: 'Project 5',
+      url: './images/DataMyte_Main Logo.svg',
+      title: 'Datamyte',
     },
     {
-      url: './images/gameon-home.png',
-      title: 'Project 6',
+      url: './images/GAMEON_LOGO_DARK.png',
+      title: 'GameOn',
     },
   ];
 

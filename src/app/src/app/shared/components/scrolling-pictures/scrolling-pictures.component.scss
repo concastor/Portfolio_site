@@ -1,6 +1,9 @@
 .container {
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
+  height: 400px;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .title {
@@ -10,9 +13,11 @@
   color: #1f2937;
 }
 
-.gallery-wrapper {
-  position: relative;
-}
+// .gallery-wrapper {
+//   width: 100%;
+//   overflow-x: hidden;
+//   position: relative;
+// }
 
 .gallery-wrapper:hover .nav-button {
   opacity: 1;
@@ -54,10 +59,26 @@
 .scroll-container {
   display: flex;
   gap: 1rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   scrollbar-width: none;
-  -ms-overflow-style: none;
+  border-radius: 0.5rem;
+
+  //animation
+  position: absolute;
+  left: 0;
+  animation-name: scroll;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  //move 50% to the left
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .scroll-container::-webkit-scrollbar {
@@ -66,8 +87,8 @@
 
 .image-card {
   flex-shrink: 0;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 300px;
   position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
