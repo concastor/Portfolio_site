@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { ScrollingPicturesComponent } from '../../shared/components/scrolling-pictures/scrolling-pictures.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [ScrollingPicturesComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    imports: [ScrollingPicturesComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   projectImages: any[] = [

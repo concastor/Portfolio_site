@@ -9,11 +9,10 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-scrolling-pictures',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './scrolling-pictures.component.html',
-  styleUrl: './scrolling-pictures.component.scss',
+    selector: 'app-scrolling-pictures',
+    imports: [CommonModule],
+    templateUrl: './scrolling-pictures.component.html',
+    styleUrl: './scrolling-pictures.component.scss'
 })
 export class ScrollingPicturesComponent implements OnInit {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef;
