@@ -22,18 +22,11 @@ export class ScrollingPicturesComponent implements OnInit {
   @Input() title: string = 'content';
 
   duplicatedImages: any[] = [];
-  randomOffset = '0ms';
+  randomOffset = '0s';
 
   ngOnInit(): void {
     this.duplicatedImages = [...this.images, ...this.images];
-    this.randomOffset = Math.floor(Math.random() * 1000) + 'ms';
-
-    console.log('randome', this.randomOffset);
-    // this.autoScroll();
-    //set how often it scrolls
-    // setInterval(() => {
-    //   this.autoScroll();
-    // }, 30);
+    this.randomOffset = 45 + Math.floor(Math.random() * 10) + 's';
   }
 
   scroll(direction: 'left' | 'right'): void {
