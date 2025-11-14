@@ -22,8 +22,7 @@ export class ScrollingPicturesComponent implements OnInit {
   @Input() title: string = 'content';
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    //set how often it scrolls
     setInterval(() => {
       this.autoScroll();
     }, 30);
