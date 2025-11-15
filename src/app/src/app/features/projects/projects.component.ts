@@ -1,13 +1,42 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
+import { Component, input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { projects } from '../../shared/constants/projects';
 @Component({
-    selector: 'app-projects',
-    imports: [CommonModule],
-    templateUrl: './projects.component.html',
-    styleUrl: './projects.component.scss'
+  selector: 'app-projects',
+  imports: [CommonModule],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss',
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  selectedProduct: any;
+  productName = 'Goldmine';
+  projects: any[] = [
+    { label: 'Goldmine', url: 'goldmine' },
+    { label: 'Steve' },
+    { label: 'Events App' },
+    { label: 'Beetok' },
+    { label: 'Datamyte' },
+    { label: 'GameOn' },
+  ];
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly router: Router
+  ) {}
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+
+    this.productName = this.route.snapshot.paramMap.get('project') ?? '';
+    this.selectedProduct = projects[this.productName as keyof typeof projects];
+    console.log('selected', this.selectedProduct, this.productName);
+  }
+
+  goToProject(selected: ''): void {
+    this.router.navigate(['/portfolio', selected]);
+  }
+
   features: { title: string; description: string }[] = [
     {
       title: 'prompt miner',

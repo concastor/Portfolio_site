@@ -1,3 +1,29 @@
+.portfolio-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  .nav-button {
+    background: rgb(116, 165, 127);
+    border: none;
+    color: black;
+    cursor: pointer;
+    font: inherit;
+    padding: 1rem;
+  }
+
+  .nav-button:hover {
+    color: white;
+    background-color: rgb(37, 41, 28);
+  }
+
+  .nav-button:focus {
+    outline: 2px solid blue;
+    outline-offset: 2px;
+  }
+}
 .portfolio-container {
   margin: 1rem;
   display: flex;
@@ -34,7 +60,15 @@
 
   .stack-container {
     font-size: 2rem;
-    background-color: grey;
+    display: flex;
+    gap: 1rem;
+    .tech-tag {
+      font-size: 1rem;
+      padding: 0.5rem;
+      background: rgb(116, 165, 127);
+      border-radius: 2rem;
+    }
+    // background-color: grey;
     // width: 100vw;
     // box-shadow: -1em 0 0.4em rgba(0, 0, 0, 0.1);
   }
@@ -46,7 +80,6 @@
     gap: 2rem;
     .feature-card {
       width: 40%;
-      height: 40%;
       padding: 1rem;
       border: 1px solid black;
     }

@@ -11,7 +11,16 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
 
   //protected route
-  { path: 'portfolio', component: ProjectsComponent, canActivate: [authGuard] },
+  {
+    path: 'portfolio/:project',
+    component: ProjectsComponent,
+    canActivate: [authGuard],
+  },
+  {
+    path: 'portfolio',
+    component: ProjectsComponent,
+    canActivate: [authGuard],
+  },
   // children : [
   //   { path: '', component: ProjectListComponent },              // /projects
   //   { path: ':id', component: ProjectDetailComponent }          // /projects/1 },

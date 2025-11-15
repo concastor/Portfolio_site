@@ -1,8 +1,16 @@
+<div class="portfolio-nav">
+  @for (project of projects; track $index) {
+  <button class="nav-button" (click)="goToProject(project.url)">
+    {{ project.label }}
+  </button>
+  }
+</div>
+@if (selectedProduct) {
 <div class="portfolio-container">
   <div class="title-header">
     <div>
-      <div class="title">Goldmine</div>
-      <div class="description">goldmine is a seller support application</div>
+      <div class="title">{{ selectedProduct.title }}</div>
+      <div class="description">{{ selectedProduct.subtitle }}</div>
     </div>
     <!-- <img [src]="/public/images/goldmine-logo-icon.png" /> logo -->
     <img src="/images/goldmine-logo-icon.png" alt="product-logo" />
@@ -12,34 +20,31 @@
     <div>
       <h1>Problem:</h1>
       <div>
-        When IBM sellers are building contact lists on Linkedin Sales Navigator
-        (LISN) there are multiple filters and options but have no way to know
-        what filters give them a targeted list for their product without
-        experience.
+        {{ selectedProduct.problem }}
       </div>
     </div>
 
     <div>
       <h1>Solution:</h1>
       <div>
-        Goldmine aids sellers by providing tested filters made by experts in
-        their brands to create a focused list of clients who are most likely to
-        be interested in the specific product. it then helps further by
-        increases your connection rate in that list by using proven message
-        frameworks for different scenarios including first touch, follow-up and
-        more.
+        {{ selectedProduct.solution }}
       </div>
     </div>
   </div>
 
+  <h2>Tech Stack:</h2>
   <div class="stack-container">
-    Tech Stack:
-    <div>Angular.js, Node.js, Nest.js, MongoDB</div>
+    @for (tech of selectedProduct.techStack; track $index) {
+
+    <div class="tech-tag">{{ tech }}</div>
+    }
   </div>
 
-  Features:
+  <h2>Features:</h2>
   <div class="feature-container">
-    <div *ngFor="let feature of features" class="feature-card">
+    @for (feature of selectedProduct.features; track $index) {
+
+    <div class="feature-card">
       <div>
         {{ feature.title }}
       </div>
@@ -47,11 +52,21 @@
         {{ feature.description }}
       </div>
     </div>
+    }
   </div>
 
   <!-- can base off dev badge -->
-  <div>roles: dev</div>
+  <!-- <div>roles: dev</div> -->
 
-  <div>what i did</div>
-  <div>what results it achieved</div>
+  <div>
+    <h2>My Contribution:</h2>
+    <div>
+      {{ selectedProduct.contribution }}
+    </div>
+  </div>
+  <h2>Results:</h2>
+  <div>
+    {{ selectedProduct.result }}
+  </div>
 </div>
+}
