@@ -21,23 +21,28 @@ export const projects = {
     features: [
       {
         title: 'Prompt Miner',
+        src: 'images/prompt-miner.png',
         description:
           "Goldmine's AI prompt builder lets users select filters such as prompt type, industry, and product to auto-generate tailored outreach messages. Users can edit, save favorite prompts to their profile, and use them in any chat platform or directly in Microsoft Copilot.",
       },
       {
         title: 'Goldmine Gems',
+        src: 'images/goldmine-gems.png',
         description:
           'Goldmine Gems uses a lean-canvas approach to display product data in easily digestible sections such as: Elevator Pitch, Pain Points, and Target Personas. this equips sellers with quick, actionable insights to boost sales effectiveness.',
       },
       {
-        title: 'LISN Keywords',
+        title: 'LISN Personas',
+        src: 'images/LISN-personas.png',
         description:
-          'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
+          '"Streamlines sales pipeline creation by providing vetted, expert-crafted prompts for targeted outreach. Users select their product category, receive proven prompts, and input them into LISN to identify high-potential prospects. This transforms a complex, time-intensive process into a simple 3-click workflow accessible to new sellers."',
       },
       {
         title: 'Message Generator',
+        src: 'images/goldmine-msg-gen.png',
+
         description:
-          'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
+          'Leverages proven message templates as a base then uses browser-based LLM to analyze the LinkedIn profiles of potential buyers, extracting relevant information to generate personalized outreach messages instantly.',
       },
     ],
 

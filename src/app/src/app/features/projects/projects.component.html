@@ -13,7 +13,7 @@
       <div class="description">{{ selectedProduct.subtitle }}</div>
     </div>
     <!-- <img [src]="/public/images/goldmine-logo-icon.png" /> logo -->
-    <img src="/images/goldmine-logo-icon.png" alt="product-logo" />
+    <img [src]="selectedProduct.icon" alt="product-logo" />
   </div>
 
   <div class="info-container">
@@ -46,11 +46,18 @@
 
     <div class="feature-card">
       <div>
-        {{ feature.title }}
+        <h3>
+          {{ feature.title }}
+        </h3>
+        <div>
+          {{ feature.description }}
+        </div>
       </div>
-      <div>
-        {{ feature.description }}
-      </div>
+      <img
+        class="feature-img"
+        [src]="feature.src ?? selectedProduct.icon"
+        alt="product-logo"
+      />
     </div>
     }
   </div>

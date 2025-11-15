@@ -4,11 +4,13 @@ import { ProjectsComponent } from './src/app/features/projects/projects.componen
 import { AboutComponent } from './src/app/features/about/about.component';
 import { authGuard } from './src/app/guards/auth.guard';
 import { LoginComponent } from './src/app/features/login/login.component';
+import { ResumeComponent } from './src/app/features/resume/resume.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, // Default route
   { path: 'about', component: AboutComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'resume', component: ResumeComponent },
 
   //protected route
   {

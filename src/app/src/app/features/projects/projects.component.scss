@@ -51,7 +51,7 @@
   }
 
   .info-container {
-    margin: 2rem;
+    // margin: 2rem;
     flex: 1 1 0px;
     gap: 2rem;
     display: flex;
@@ -79,9 +79,16 @@
     flex-wrap: wrap;
     gap: 2rem;
     .feature-card {
-      width: 40%;
+      display: flex;
+      width: 45%;
+      border-radius: 2rem;
       padding: 1rem;
       border: 1px solid black;
+    }
+    .feature-img {
+      min-width: 70%;
+      height: 20rem;
+      object-fit: contain;
     }
   }
 }
