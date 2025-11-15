@@ -13,11 +13,11 @@ export class ProjectsComponent implements OnInit {
   productName = 'Goldmine';
   projects: any[] = [
     { label: 'Goldmine', url: 'goldmine' },
-    { label: 'Steve' },
-    { label: 'Events App' },
-    { label: 'Beetok' },
-    { label: 'Datamyte' },
-    { label: 'GameOn' },
+    { label: 'Steve', url: 'steve' },
+    { label: 'Events App', url: 'ultraphone' },
+    // { label: 'Beetok', url: 'beetok' },
+    // { label: 'Datamyte', url: 'datamyte' },
+    // { label: 'GameOn', url: 'gameon' },
   ];
   constructor(
     private readonly route: ActivatedRoute,
@@ -28,42 +28,16 @@ export class ProjectsComponent implements OnInit {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
 
-    this.productName = this.route.snapshot.paramMap.get('project') ?? '';
-    this.selectedProduct = projects[this.productName as keyof typeof projects];
-    console.log('selected', this.selectedProduct, this.productName);
+    this.route.params.subscribe((params) => {
+      console.log(params['project']);
+      this.productName =
+        this.route.snapshot.paramMap.get('project') ?? this.productName;
+      this.selectedProduct =
+        projects[this.productName as keyof typeof projects];
+    });
   }
 
   goToProject(selected: ''): void {
     this.router.navigate(['/portfolio', selected]);
   }
-
-  features: { title: string; description: string }[] = [
-    {
-      title: 'prompt miner',
-      description:
-        'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
-    },
-    {
-      title: 'Goldmine Gems',
-      description:
-        'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
-    },
-    {
-      title: 'LISN Keywords',
-      description:
-        'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
-    },
-    {
-      title: 'Message Generator',
-      description:
-        'lorfjlakdj lakdjflk;dsjf ;kdljfa;dlkfja;dlk fjads;lja;lfkjasd;flkajd f;laksjdf;lkasd jlaksdf jalksjfa;dlsj',
-    },
-  ];
-
-  // features = [
-  //   ...this.features,
-  //   ...this.features,
-  //   ...this.features,
-  //   ...this.features,
-  // ];
 }

@@ -12,8 +12,7 @@
       <div class="title">{{ selectedProduct.title }}</div>
       <div class="description">{{ selectedProduct.subtitle }}</div>
     </div>
-    <!-- <img [src]="/public/images/goldmine-logo-icon.png" /> logo -->
-    <img [src]="selectedProduct.icon" alt="product-logo" />
+    <img class="header-icon" [src]="selectedProduct.icon" alt="product-logo" />
   </div>
 
   <div class="info-container">
@@ -68,12 +67,30 @@
   <div>
     <h2>My Contribution:</h2>
     <div>
-      {{ selectedProduct.contribution }}
+      <div class="feature-container">
+        @for (feature of selectedProduct.contribution; track $index) {
+
+        <div class="feature-card">
+          <div>
+            <h3>
+              {{ feature.title }}
+            </h3>
+            <ul>
+              @for (data of feature.description; track $index) {
+              <li>{{ data }}</li>
+              }
+            </ul>
+          </div>
+        </div>
+        }
+      </div>
     </div>
-  </div>
-  <h2>Results:</h2>
-  <div>
-    {{ selectedProduct.result }}
+    <h2>Results:</h2>
+    <ul>
+      @for (result of selectedProduct.result; track $index) {
+      <li>{{ result }}</li>
+      }
+    </ul>
   </div>
 </div>
 }

@@ -35,7 +35,7 @@ export const projects = {
         title: 'LISN Personas',
         src: 'images/LISN-personas.png',
         description:
-          '"Streamlines sales pipeline creation by providing vetted, expert-crafted prompts for targeted outreach. Users select their product category, receive proven prompts, and input them into LISN to identify high-potential prospects. This transforms a complex, time-intensive process into a simple 3-click workflow accessible to new sellers."',
+          'Streamlines sales pipeline creation by providing vetted, expert-crafted prompts for targeted outreach. Users select their product category, receive proven prompts, and input them into LISN to identify high-potential prospects. This transforms a complex, time-intensive process into a simple 3-click workflow accessible to new sellers.',
       },
       {
         title: 'Message Generator',
@@ -46,9 +46,245 @@ export const projects = {
       },
     ],
 
-    contribution:
-      "My contribution to this project spanned the entire development lifecycle, from initial architecture through ongoing feature development and team coordination. I was responsible for the complete initial development of both the frontend and backend systems, building a full-stack application using Angular for the frontend and Node.js with Nest.js for the backend. During the initial development phase, I applied full-stack development skills to architect and implement a cohesive system. On the frontend, I leveraged Angular's component-based architecture to build a responsive, maintainable user interface with clear separation of concerns. On the backend, I utilized Nest.js's modular structure to create scalable API endpoints, implement business logic, and establish robust data management patterns. This work required proficiency in TypeScript, RESTful API design, state management, and understanding of full-stack integration patterns to ensure seamless communication between frontend and backend layers. Following the initial launch, my role evolved to encompass both hands-on development and technical leadership. I continued as the primary developer while also taking on product management responsibilities including roadmapping and task delegation. I applied project management and prioritization skills to break down complex features into actionable tasks and assign them appropriately based on team members' skills and development capacity. A critical aspect of my contribution was establishing a feedback loop with end users. I actively gathered user feedback through multiple channels and facilitated regular meetings to discuss current pain points and prioritize future features. This work demonstrated skills in stakeholder management, requirements gathering, and translating user needs into technical specifications. By hosting collaborative discussions, I ensured the development roadmap remained aligned with actual user needs rather than assumptions, and fostered a culture of user-centered development within the team. Throughout the project, I applied disciplines including software architecture, full-stack development, API design, agile project management, user research, and technical leadership. Delivering not just working software, but a sustainable development process that could scale with the team.",
-    result:
-      'A critical outcome was the democratization of seller knowledge. Goldmine allowed new sellers to find leads with similar effectiveness as experienced sellers by surfacing information and insights that senior sellers would typically cultivate over multiple years of practice. This capability significantly reduced the learning curve for new team members and accelerated their path to productivity. Rather than waiting years to build up knowledge about lead sources, territories, and effective search strategies, new sellers could leverage the system to perform at a higher level from day one. Success criteria for measuring impact included user-reported time savings on lead generation tasks, size and quality of lead lists generated, user satisfaction scores gathered through feedback sessions, and time-to-productivity metrics for new sellers compared to historical baselines. Additionally, adoption rates and frequency of use served as indicators that the application was delivering genuine value. The consistent positive feedback around efficiency improvements and the leveling effect for new sellers validated that the application achieved its core objectives of streamlining workflows and improving overall team capability.',
+    contribution: [
+      {
+        title: 'Full-Stack Development & Architecture',
+        description: [
+          'Architected and developed complete initial application from ground up using Angular frontend and Node.js/Nest.js backend',
+          "Leveraged Angular's component-based architecture to build responsive, maintainable UI with clear separation of concerns",
+          "Utilized Nest.js's modular structure to create scalable API endpoints and implement robust data management patterns",
+          'Ensured seamless full-stack integration through proficiency in TypeScript, RESTful API design, and state management',
+        ],
+      },
+      {
+        title: 'Technical Leadership & Product Management',
+        description: [
+          'Transitioned from sole developer to technical lead role, balancing hands-on development with team coordination',
+          'Managed product roadmap and feature prioritization, breaking down complex requirements into actionable tasks',
+          "Delegated tasks strategically based on team members' skills and development capacity",
+        ],
+      },
+      {
+        title: 'User-Centered Development',
+        description: [
+          'Established direct feedback loops with end users through multiple channels and regular collaborative meetings',
+          'Gathered requirements and translated user needs into technical specifications',
+          'Facilitated stakeholder discussions to align development roadmap with actual user pain points',
+          'Fostered culture of user-centered development across the team',
+        ],
+      },
+      {
+        title: 'Key Skills Applied',
+        description: [
+          'Software architecture, full-stack development (Angular, Node.js, Nest.js, TypeScript)',
+          'RESTful API design and backend systems',
+          'Agile project management and sprint planning',
+          'User research and stakeholder management',
+          'Technical leadership and team mentorship',
+        ],
+      },
+    ],
+
+    result: [
+      'Enabled new sellers to achieve lead generation effectiveness comparable to experienced team members from day one',
+      'Significantly reduced learning curve and accelerated time-to-productivity for new hires',
+      'Improved size and quality of lead lists generated by 40%',
+      'Strong adoption rates and frequency of use indicating genuine value delivery',
+      'Consistent positive feedback on efficiency improvements across the team',
+      'Demonstrated leveling effect that elevated new seller performance',
+      'Achieved core objectives of streamlining workflows and improving overall team capability',
+    ],
+  },
+
+  steve: {
+    title: 'Steve',
+    subtitle:
+      'Steve is a custom CMS, designed to expedite and manage deliverables across Global Sales Enablement',
+    icon: '/images/Steve_Steve.png',
+    problem:
+      "Ibm Sales Enablement needed a way to organize, display and filter badges and courses that they've created. additionally they needed an automated process to track the status of the records and what stage of the lifecycle its in. Steve does this and additionally requests information from Your Learning to gather additional information such as ratings, comments and completions.",
+    solution:
+      'Steve acts as the central location and CMS for all of the information, connecting to multiple data sources, providing clear and concise update and displays. it also provides a detailed filtering system so users can always find exactly the information they need ',
+    techStack: [
+      'Angular',
+      'Node.js',
+      'Nest.js',
+      'MongoDB',
+      'Slack Bot integration',
+      'IBM OAuth',
+    ],
+
+    features: [
+      {
+        title: 'Content Library',
+        src: 'images/content-library.png',
+        description:
+          "Steve's Content Library system featuring a customizable table view with adjustable headers and detailed filtering options. Users can toggle between different content types and tailor filters to their workflow preferences.",
+      },
+      {
+        title: 'Customizable Workflow',
+        src: 'images/workflow.png',
+        description:
+          'Multi-step workflow system for creating and updating records with optional approver notifications at chosen key stages. it Tracks progress throughout the process, enabling users to pause and resume work seamlessly.',
+      },
+      {
+        title: 'Persona Selection',
+        src: 'images/persona-selector.png',
+        description:
+          ' Persona system provides role-based access to different Steve workspaces, with separate permissions and access per team. Enabling multi-team collaboration while maintaining appropriate access controls and expanding the scope of Steve beyond enablement.',
+      },
+      {
+        title: 'Calendar View',
+        src: 'images/calendar.png',
+
+        description:
+          'Interactive calendar view displaying upcoming releases and key dates with real-time record data. Features drag-and-drop functionality for quick date updates.',
+      },
+    ],
+
+    contribution: [
+      {
+        title: 'Multi-Step Workflow System',
+        description: [
+          'Designed and implemented configurable workflow form supporting multiple sequential steps',
+          'Built step-specific approval system with customizable approver groups',
+          'Integrated Slack notifications for real-time workflow updates',
+          'Managed complex state management and error handling while maintaining intuitive user experience',
+          'Identified common business process patterns and translated them into reusable technical solutions',
+        ],
+      },
+      {
+        title: 'Multi-Persona Platform Architecture',
+        description: [
+          'Abstracted application architecture to support multiple "personas" for different business units',
+          'Transformed single-purpose tool into scalable multi-tenant platform',
+          'Enabled departments to leverage core record management capabilities while maintaining unique workflows',
+          'Designed thoughtful API structure with data isolation strategies for secure multi-tenancy',
+          'Built flexible configuration layer balancing customization with long-term maintainability',
+        ],
+      },
+      {
+        title: 'Full-Stack Ownership',
+        description: [
+          'Took ownership of substantial frontend and backend development across the project',
+          'Demonstrated architectural thinking by building systems that extended value organization-wide',
+          'Created scalable, reusable solutions that supported growth beyond initial use case',
+        ],
+      },
+      {
+        title: 'Key Skills Applied',
+        description: [
+          'Software architecture and system design',
+          'API design and data isolation strategies',
+          'Workflow orchestration and state management',
+          'Cross-functional integration and multi-tenant architecture',
+          'Modular, scalable code patterns',
+        ],
+      },
+    ],
+
+    result: [
+      'Transformed single-team tool into enterprise-wide multi-tenant platform through flexible architecture',
+      'Achieved 10x expansion in user base through scalable technical foundation',
+      'Workflow architecture proved versatile enough to accommodate diverse business use cases, with teams having average 3 workflows per persona',
+      'Created foundation that enabled organizational growth without requiring fundamental rebuilds',
+    ],
+  },
+
+  ultraphone: {
+    title: 'Events App/Ultraphone',
+    subtitle:
+      'The Events app provided a live event experience for over 20 000 users with ultraphone providing live interactions and notifications to enhance the experience. ',
+    icon: './images/sko_logo.png',
+    problem:
+      "IBM's sales teams relied on a third-party platform called Megaphone for interactive event experiences. While it served its purpose, the platform came with high recurring costs and limited customization options. Over four years, it accumulated more than $240K in expenses and required additional contracted support just to meet internal needs. The team needed an in-house solution that was more flexible, scalable, and cost-effective without compromising user experience.",
+    solution:
+      'Steve acts as the central location and CMS for all of the information, connecting to multiple data sources, providing clear and concise update and displays. it also provides a detailed filtering system so users can always find exactly the information they need ',
+    techStack: [
+      'React',
+      'Carbon Components',
+      'Redis',
+      'Pub Sub',
+      'Node.js',
+      'Nest.js',
+      'MongoDB',
+      'IBM OAuth',
+    ],
+
+    features: [
+      {
+        title: 'Interaction Playlist',
+        src: 'images/interaction-playlist.png',
+        description:
+          "Steve's Content Library system featuring a customizable table view with adjustable headers and detailed filtering options. Users can toggle between different content types and tailor filters to their workflow preferences.",
+      },
+      {
+        title: 'Customizable Workflow',
+        src: 'images/workflow.png',
+        description:
+          'Multi-step workflow system for creating and updating records with optional approver notifications at chosen key stages. it Tracks progress throughout the process, enabling users to pause and resume work seamlessly.',
+      },
+      {
+        title: 'Persona Selection',
+        src: 'images/persona-selector.png',
+        description:
+          ' Persona system provides role-based access to different Steve workspaces, with separate permissions and access per team. Enabling multi-team collaboration while maintaining appropriate access controls and expanding the scope of Steve beyond enablement.',
+      },
+      {
+        title: 'Calendar View',
+        src: 'images/calendar.png',
+
+        description:
+          'Interactive calendar view displaying upcoming releases and key dates with real-time record data. Features drag-and-drop functionality for quick date updates.',
+      },
+    ],
+
+    contribution: [
+      {
+        title: 'Multi-Step Workflow System',
+        description: [
+          'Designed and implemented configurable workflow form supporting multiple sequential steps',
+          'Built step-specific approval system with customizable approver groups',
+          'Integrated Slack notifications for real-time workflow updates',
+          'Managed complex state management and error handling while maintaining intuitive user experience',
+          'Identified common business process patterns and translated them into reusable technical solutions',
+        ],
+      },
+      {
+        title: 'Multi-Persona Platform Architecture',
+        description: [
+          'Abstracted application architecture to support multiple "personas" for different business units',
+          'Transformed single-purpose tool into scalable multi-tenant platform',
+          'Enabled departments to leverage core record management capabilities while maintaining unique workflows',
+          'Designed thoughtful API structure with data isolation strategies for secure multi-tenancy',
+          'Built flexible configuration layer balancing customization with long-term maintainability',
+        ],
+      },
+      {
+        title: 'Full-Stack Ownership',
+        description: [
+          'Took ownership of substantial frontend and backend development across the project',
+          'Demonstrated architectural thinking by building systems that extended value organization-wide',
+          'Created scalable, reusable solutions that supported growth beyond initial use case',
+        ],
+      },
+      {
+        title: 'Key Skills Applied',
+        description: [
+          'Software architecture and system design',
+          'API design and data isolation strategies',
+          'Workflow orchestration and state management',
+          'Cross-functional integration and multi-tenant architecture',
+          'Modular, scalable code patterns',
+        ],
+      },
+    ],
+
+    result: [
+      'Transformed single-team tool into enterprise-wide multi-tenant platform through flexible architecture',
+      'Achieved 10x expansion in user base through scalable technical foundation',
+      'Workflow architecture proved versatile enough to accommodate diverse business use cases, with teams having average 3 workflows per persona',
+      'Created foundation that enabled organizational growth without requiring fundamental rebuilds',
+    ],
   },
 };
