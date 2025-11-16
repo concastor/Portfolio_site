@@ -216,75 +216,72 @@ export const projects = {
         title: 'Interaction Playlist',
         src: 'images/interaction-playlist.png',
         description:
-          "Steve's Content Library system featuring a customizable table view with adjustable headers and detailed filtering options. Users can toggle between different content types and tailor filters to their workflow preferences.",
+          'Event management interface displaying interaction playlists with real-time status tracking. Admins can manually control or schedule event start/stop times using preset timers, with visibility into current interactions and session progress.',
       },
       {
-        title: 'Customizable Workflow',
-        src: 'images/workflow.png',
+        title: 'Interaction Display',
+        src: 'images/interaction-display.png',
         description:
-          'Multi-step workflow system for creating and updating records with optional approver notifications at chosen key stages. it Tracks progress throughout the process, enabling users to pause and resume work seamlessly.',
+          'Event viewer featuring video playback with session details (title,speakers, descriptions) and an integrated chat/interaction panel. Auto-displays admin-submitted interactions with user notifications to drive engagement.',
       },
       {
-        title: 'Persona Selection',
-        src: 'images/persona-selector.png',
+        title: 'Results Page',
+        src: 'images/results-page.png',
         description:
-          ' Persona system provides role-based access to different Steve workspaces, with separate permissions and access per team. Enabling multi-team collaboration while maintaining appropriate access controls and expanding the scope of Steve beyond enablement.',
+          'Results page displaying user responses organized by interaction type. Features soft delete moderation tools for removing inappropriate content across interaction formats during live event. post-event the page provides a summary of the responses for visualization',
       },
       {
-        title: 'Calendar View',
-        src: 'images/calendar.png',
+        title: 'Interaction Dashboard',
+        src: 'images/interaction-dashboard.png',
 
         description:
-          'Interactive calendar view displaying upcoming releases and key dates with real-time record data. Features drag-and-drop functionality for quick date updates.',
+          'Admin dashboard for building and managing event interaction playlists. Features drag-and-drop reordering across multiple events, plus full CRUD capabilities for interactions and their associated information.',
       },
     ],
 
     contribution: [
       {
-        title: 'Multi-Step Workflow System',
+        title: 'Dashboard Page Design & Implementation',
         description: [
-          'Designed and implemented configurable workflow form supporting multiple sequential steps',
-          'Built step-specific approval system with customizable approver groups',
-          'Integrated Slack notifications for real-time workflow updates',
-          'Managed complex state management and error handling while maintaining intuitive user experience',
-          'Identified common business process patterns and translated them into reusable technical solutions',
+          'Created initial UI and dashboard page from ground up',
+          'Provided clear, comprehensive display of all planned event interactions',
+          'Enabled quick creation, editing, and rearrangement of interactions with no coding knowledge required',
+          'Focused on intuitive user experience for non-technical users',
         ],
       },
       {
-        title: 'Multi-Persona Platform Architecture',
+        title: 'Results Page Implementation',
         description: [
-          'Abstracted application architecture to support multiple "personas" for different business units',
-          'Transformed single-purpose tool into scalable multi-tenant platform',
-          'Enabled departments to leverage core record management capabilities while maintaining unique workflows',
-          'Designed thoughtful API structure with data isolation strategies for secure multi-tenancy',
-          'Built flexible configuration layer balancing customization with long-term maintainability',
+          'Built dual-function results page for post-event analysis and management',
+          'Developed display system for all user responses organized and sorted by interaction type',
+          'Implemented soft delete functionality for inappropriate or unrelated user responses across various interaction formats (word clouds, leaderboards, etc.)',
+          'Created efficient data management tools for live moderation of displayed content',
         ],
       },
       {
-        title: 'Full-Stack Ownership',
+        title: 'Leaderboard Implementation',
         description: [
-          'Took ownership of substantial frontend and backend development across the project',
-          'Demonstrated architectural thinking by building systems that extended value organization-wide',
-          'Created scalable, reusable solutions that supported growth beyond initial use case',
+          'Created MongoDb aggregation to gather all user responses, add all scores of single user and display the top participants',
+          'Optimized Database operation to handle calculations on large dataset for live event.',
+          'Created Abstracted display component to show leaderboard results with customizable length.',
         ],
       },
       {
         title: 'Key Skills Applied',
         description: [
-          'Software architecture and system design',
-          'API design and data isolation strategies',
-          'Workflow orchestration and state management',
-          'Cross-functional integration and multi-tenant architecture',
-          'Modular, scalable code patterns',
+          'Frontend development with focus on usability and accessibility',
+          'No-code interface design for non-technical event planners',
+          'Data visualization and management systems',
         ],
       },
     ],
 
     result: [
-      'Transformed single-team tool into enterprise-wide multi-tenant platform through flexible architecture',
-      'Achieved 10x expansion in user base through scalable technical foundation',
-      'Workflow architecture proved versatile enough to accommodate diverse business use cases, with teams having average 3 workflows per persona',
-      'Created foundation that enabled organizational growth without requiring fundamental rebuilds',
+      'Saved IBM up to $500K by replacing a third-party event platform with a scalable, in-house React solution.',
+      'Reduced integration maintenance costs associated with external systems',
+      'Addressed critical pain points inherent in vendor solution',
+      'Resolved issues with limited flexibility and Improved integration capabilities across internal systems',
+      'Delivered greater control and customization aligned with business needs',
     ],
   },
 };

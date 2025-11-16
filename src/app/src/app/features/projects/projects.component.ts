@@ -13,8 +13,8 @@ export class ProjectsComponent implements OnInit {
   productName = 'Goldmine';
   projects: any[] = [
     { label: 'Goldmine', url: 'goldmine' },
-    { label: 'Steve', url: 'steve' },
     { label: 'Events App', url: 'ultraphone' },
+    { label: 'Steve', url: 'steve' },
     // { label: 'Beetok', url: 'beetok' },
     // { label: 'Datamyte', url: 'datamyte' },
     // { label: 'GameOn', url: 'gameon' },
