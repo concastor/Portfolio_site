@@ -2,27 +2,37 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
+
+  margin: 2rem 1rem;
+  position: static;
 
   .nav-button {
-    background: rgb(116, 165, 127);
-    border: none;
-    color: black;
+    padding-right: 3rem;
+    color: #666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
     cursor: pointer;
-    font: inherit;
-    padding: 1rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    border-bottom: 2px solid grey;
+
+    &:hover {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+    }
+    &.active {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+    }
   }
 
-  .nav-button:hover {
-    color: white;
-    background-color: rgb(37, 41, 28);
-  }
-
-  .nav-button:focus {
-    outline: 2px solid blue;
-    outline-offset: 2px;
-  }
+  // .nav-button:focus {
+  //   outline: 2px solid blue;
+  //   outline-offset: 2px;
+  // }
 }
 .portfolio-container {
   margin: 1rem;

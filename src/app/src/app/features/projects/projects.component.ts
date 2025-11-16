@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { projects } from '../../shared/constants/projects';
 @Component({
@@ -10,7 +10,7 @@ import { projects } from '../../shared/constants/projects';
 })
 export class ProjectsComponent implements OnInit {
   selectedProduct: any;
-  productName = 'Goldmine';
+  productName = 'goldmine';
   projects: any[] = [
     { label: 'Goldmine', url: 'goldmine' },
     { label: 'Events App', url: 'ultraphone' },
@@ -25,11 +25,7 @@ export class ProjectsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-
     this.route.params.subscribe((params) => {
-      console.log(params['project']);
       this.productName =
         this.route.snapshot.paramMap.get('project') ?? this.productName;
       this.selectedProduct =

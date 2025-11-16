@@ -1,6 +1,10 @@
 <div class="portfolio-nav">
   @for (project of projects; track $index) {
-  <button class="nav-button" (click)="goToProject(project.url)">
+  <button
+    class="nav-button"
+    [ngClass]="{ active: project.url === productName }"
+    (click)="goToProject(project.url)"
+  >
     {{ project.label }}
   </button>
   }
