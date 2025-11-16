@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-
+import { environment } from '../../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   private isAuthenticated = false;
-  private readonly correctPassword = 'JakeR'; // In production, never store passwords like this!
+  // private readonly correctPassword = 'jaker';
 
   checkPassword(password: string): boolean {
-    if (password === this.correctPassword) {
+    if (password.toLowerCase() === environment.correctPassword) {
       this.isAuthenticated = true;
       sessionStorage.setItem('authenticated', 'true');
       return true;
