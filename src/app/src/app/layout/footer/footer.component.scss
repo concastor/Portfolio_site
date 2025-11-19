@@ -12,5 +12,9 @@
   .links {
     display: flex;
     gap: 2rem;
+    link:visited {
+      text-decoration: none;
+      color: red;
+    }
   }
 }
