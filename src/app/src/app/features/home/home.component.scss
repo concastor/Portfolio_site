@@ -1,6 +1,11 @@
 .home-container {
+  padding-bottom: 5rem;
+  background-color: #e5d0e3;
+
   .section {
-    margin: 10rem;
+    padding: 10rem;
+    background-color: #4d5638;
+    // color: lightgray;
   }
   h1 {
     font-size: 4rem;
@@ -9,7 +14,15 @@
     font-size: 3rem;
   }
 
-  .sub-section {
-    font-size: 2rem;
+  .sub-display {
+    border-radius: 1rem;
+    background-color: #b1b6a5;
+
+    margin: 0 5rem;
+    margin-top: -5rem;
+    .sub-section {
+      padding: 2rem;
+      font-size: 2rem;
+    }
   }
 }
