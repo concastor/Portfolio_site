@@ -35,7 +35,7 @@
     </div>
   </div>
 
-  <h2>Tech Stack:</h2>
+  <h1>Tech Stack:</h1>
   <div class="stack-container">
     @for (tech of selectedProduct.techStack; track $index) {
 
@@ -43,7 +43,7 @@
     }
   </div>
 
-  <h2>Features:</h2>
+  <h1>Features:</h1>
   <div class="feature-container">
     @for (feature of selectedProduct.features; track $index) {
 
@@ -69,7 +69,7 @@
   <!-- <div>roles: dev</div> -->
 
   <div>
-    <h2>My Contribution:</h2>
+    <h1>My Contribution:</h1>
     <div>
       <div class="feature-container">
         @for (feature of selectedProduct.contribution; track $index) {
@@ -89,10 +89,10 @@
         }
       </div>
     </div>
-    <h2>Results:</h2>
+    <h1>Results:</h1>
     <ul>
       @for (result of selectedProduct.result; track $index) {
-      <li>{{ result }}</li>
+      <li class="results-list">{{ result }}</li>
       }
     </ul>
   </div>

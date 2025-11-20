@@ -2,7 +2,7 @@ export const projects = {
   goldmine: {
     title: 'Goldmine',
     subtitle:
-      'Goldmine is a seller support application that Accelerates sales through AI, technology, and tradecraft',
+      'Goldmine is a seller support application that accelerates sales through AI, technology, and tradecraft',
     icon: '/images/goldmine-logo-icon.png',
     problem:
       'When IBM sellers are building contact lists on Linkedin Sales Navigator (LISN) there are multiple filters and options but have no way to know what filters give them a targeted list for their product without experience.',
