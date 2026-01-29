@@ -65,7 +65,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit(): void {
     //offset viewpoint to include fancy waves
-    this.viewportScroller.setOffset([0, 80]);
+    this.viewportScroller.setOffset([0, 50]);
 
     //observer to check current scroll location
     this.observer = new IntersectionObserver(

@@ -32,7 +32,9 @@
 .portfolio-container {
   display: flex;
   flex-direction: column;
-
+  h2 {
+    font-size: 3rem;
+  }
   .title-header {
     padding: 2rem;
     display: flex;
@@ -89,9 +91,6 @@
     align-items: center;
     width: 100%;
 
-    h2 {
-      font-size: 3rem;
-    }
     .stack-display {
       font-size: 2rem;
       width: 50%;
@@ -114,7 +113,7 @@
           left: 0;
           width: 75%;
           height: 1px;
-          background-color: #000;
+          background-color: var(--primary-color);
         }
       }
     }
@@ -122,20 +121,41 @@
 
   .feature-container {
     display: flex;
-    flex: 1 1 0px;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
     .feature-card {
       display: flex;
-      width: 45%;
       border-radius: 2rem;
-      padding: 1rem;
-      border: 1px solid black;
-    }
-    .feature-img {
-      min-width: 70%;
-      height: 20rem;
-      object-fit: contain;
+      position: relative;
+      padding: 2rem;
+      font-size: 1.25rem;
+      &::after {
+        content: "";
+        position: absolute;
+        margin: auto;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--background-color);
+      }
+
+      h3 {
+        font-size: 2rem;
+      }
+      .img-container {
+        padding-left: 2rem;
+        flex: 1 0 75%;
+        display: flex;
+        justify-content: center;
+      }
+      .feature-img {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
     }
   }
 }

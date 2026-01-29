@@ -49,52 +49,47 @@
     </app-section-block>
 
     <app-section-block [id]="tabs[3]" type="primary">
-      <div class="section">
-        <h2>Features:</h2>
-        <div class="feature-container">
-          @for (feature of selectedProduct.features; track $index) {
-            <div class="feature-card">
+      <div class="feature-container">
+        <h2>Features</h2>
+        @for (feature of selectedProduct.features; track $index) {
+          <div class="feature-card">
+            <div>
+              <h3>
+                {{ feature.title }}
+              </h3>
               <div>
-                <h3>
-                  {{ feature.title }}
-                </h3>
-                <div>
-                  {{ feature.description }}
-                </div>
+                {{ feature.description }}
               </div>
+            </div>
+            <div class="img-container">
               <img
                 class="feature-img"
                 [src]="feature.src ?? selectedProduct.icon"
                 alt="product-logo"
               />
             </div>
-          }
-        </div>
+          </div>
+        }
       </div>
     </app-section-block>
 
-    <!-- can base off dev badge -->
-    <!-- <div>roles: dev</div> -->
-
     <app-section-block [id]="tabs[4]">
-      <h2>My Contribution:</h2>
-      <div>
-        <div class="feature-container">
-          @for (feature of selectedProduct.contribution; track $index) {
-            <div class="feature-card">
-              <div>
-                <h3>
-                  {{ feature.title }}
-                </h3>
-                <ul>
-                  @for (data of feature.description; track $index) {
-                    <li>{{ data }}</li>
-                  }
-                </ul>
-              </div>
+      <div class="feature-container">
+        <h2>My Contribution:</h2>
+        @for (feature of selectedProduct.contribution; track $index) {
+          <div class="feature-card">
+            <div>
+              <h3>
+                {{ feature.title }}
+              </h3>
+              <ul>
+                @for (data of feature.description; track $index) {
+                  <li>{{ data }}</li>
+                }
+              </ul>
             </div>
-          }
-        </div>
+          </div>
+        }
       </div>
     </app-section-block>
     <app-section-block [id]="tabs[5]" type="primary">
