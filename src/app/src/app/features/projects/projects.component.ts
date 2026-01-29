@@ -1,5 +1,12 @@
 import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { projects } from '../../shared/constants/projects';
 import { TabsComponent } from '../tabs/tabs.component';
@@ -10,6 +17,8 @@ import { TabsComponent } from '../tabs/tabs.component';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
+  @ViewChildren('section') sections!: QueryList<ElementRef>;
+
   private readonly viewportScroller = inject(ViewportScroller);
 
   selectedProduct: any;
@@ -34,6 +43,8 @@ export class ProjectsComponent implements OnInit {
       this.selectedProduct =
         projects[this.productName as keyof typeof projects];
     });
+
+    this.viewportScroller.setOffset([0, 80]); // 80px from top
   }
 
   goToProject(selected: ''): void {
