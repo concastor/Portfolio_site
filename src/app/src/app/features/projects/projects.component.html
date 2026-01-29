@@ -16,70 +16,76 @@
     (sectionSelected)="scrollToSection($event)"
   />
   <div class="portfolio-container">
-    <div class="title-header" [id]="tabs[0]">
-      <div>
-        <div class="title">{{ selectedProduct.title }}</div>
-        <div class="description">{{ selectedProduct.subtitle }}</div>
-      </div>
-      <img
-        class="header-icon"
-        [src]="selectedProduct.icon"
-        alt="product-logo"
-      />
-    </div>
-
-    <div class="info-container section" [id]="tabs[1]">
-      <div>
-        <h1>Problem:</h1>
+    <app-section-block [id]="tabs[0]">
+      <div class="title-header">
         <div>
-          {{ selectedProduct.problem }}
+          <div class="title">{{ selectedProduct.title }}</div>
+          <div class="description">{{ selectedProduct.subtitle }}</div>
+        </div>
+        <img
+          class="header-icon"
+          [src]="selectedProduct.icon"
+          alt="product-logo"
+        />
+      </div>
+    </app-section-block>
+
+    <app-section-block [id]="tabs[1]" type="primary">
+      <div class="info-container">
+        <div>
+          <h1>Problem:</h1>
+          <div>
+            {{ selectedProduct.problem }}
+          </div>
+        </div>
+
+        <div>
+          <h1>Solution:</h1>
+          <div>
+            {{ selectedProduct.solution }}
+          </div>
         </div>
       </div>
+    </app-section-block>
 
-      <div>
-        <h1>Solution:</h1>
-        <div>
-          {{ selectedProduct.solution }}
-        </div>
-      </div>
-    </div>
-
-    <div class="section" [id]="tabs[2]">
+    <app-section-block [id]="tabs[2]">
       <h2>Tech Stack:</h2>
       <div class="stack-container">
         @for (tech of selectedProduct.techStack; track $index) {
           <div class="tech-tag">{{ tech }}</div>
         }
       </div>
-    </div>
+    </app-section-block>
 
-    <div class="section" [id]="tabs[3]">
-      <h2>Features:</h2>
-      <div class="feature-container">
-        @for (feature of selectedProduct.features; track $index) {
-          <div class="feature-card">
-            <div>
-              <h3>
-                {{ feature.title }}
-              </h3>
+    <app-section-block [id]="tabs[3]" type="primary">
+      <div class="section">
+        <h2>Features:</h2>
+        <div class="feature-container">
+          @for (feature of selectedProduct.features; track $index) {
+            <div class="feature-card">
               <div>
-                {{ feature.description }}
+                <h3>
+                  {{ feature.title }}
+                </h3>
+                <div>
+                  {{ feature.description }}
+                </div>
               </div>
+              <img
+                class="feature-img"
+                [src]="feature.src ?? selectedProduct.icon"
+                alt="product-logo"
+              />
             </div>
-            <img
-              class="feature-img"
-              [src]="feature.src ?? selectedProduct.icon"
-              alt="product-logo"
-            />
-          </div>
-        }
+          }
+        </div>
       </div>
-    </div>
+    </app-section-block>
 
     <!-- can base off dev badge -->
     <!-- <div>roles: dev</div> -->
 
-    <div class="section" [id]="tabs[4]">
+    <app-section-block [id]="tabs[4]">
       <h2>My Contribution:</h2>
       <div>
         <div class="feature-container">
@@ -99,15 +105,14 @@
           }
         </div>
       </div>
-
-      <div class="section" [id]="tabs[5]">
-        <h2>Results:</h2>
-        <ul>
-          @for (result of selectedProduct.result; track $index) {
-            <li>{{ result }}</li>
-          }
-        </ul>
-      </div>
-    </div>
+    </app-section-block>
+    <app-section-block [id]="tabs[5]" type="primary">
+      <h2>Results:</h2>
+      <ul>
+        @for (result of selectedProduct.result; track $index) {
+          <li>{{ result }}</li>
+        }
+      </ul>
+    </app-section-block>
   </div>
 }

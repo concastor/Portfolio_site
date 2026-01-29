@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Input } from '@angular/core';
 
 @Component({
   selector: 'app-section-block',
@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './section-block.component.scss',
 })
 export class SectionBlockComponent {
+  @Input() type: string = '';
 
+  constructor(public elementRef: ElementRef) {}
 }

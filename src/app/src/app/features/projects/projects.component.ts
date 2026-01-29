@@ -10,9 +10,10 @@ import {
 import { ActivatedRoute, Router } from '@angular/router';
 import { projects } from '../../shared/constants/projects';
 import { TabsComponent } from '../tabs/tabs.component';
+import { SectionBlockComponent } from '../../layout/section-block/section-block.component';
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, TabsComponent],
+  imports: [CommonModule, TabsComponent, SectionBlockComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
