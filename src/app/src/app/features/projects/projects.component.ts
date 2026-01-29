@@ -73,11 +73,12 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             this.activeSection = entry.target.id || this.tabs[0];
+            console.log('active section', this.activeSection);
             this.cdr.detectChanges();
           }
         });
       },
-      { threshold: 0.5 }, //50% viewable
+      { threshold: 0.4 }, //50% viewable
     );
 
     this.sections.forEach((section) => {

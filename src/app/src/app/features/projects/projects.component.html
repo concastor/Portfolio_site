@@ -1,14 +1,3 @@
-<!-- <div class="portfolio-nav">
-  @for (project of projects; track $index) {
-    <button
-      class="nav-button"
-      [ngClass]="{ active: project.url === productName }"
-      (click)="goToProject(project.url)"
-    >
-      {{ project.label }}
-    </button>
-  }
-</div> -->
 @if (selectedProduct) {
   <app-tabs
     [tabs]="tabs"
