@@ -3,7 +3,6 @@ import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
-  ElementRef,
   inject,
   OnInit,
   QueryList,
@@ -77,7 +76,7 @@ export class ProjectsComponent implements OnInit, AfterViewInit {
           }
         });
       },
-      { threshold: 0.4 }, //% viewable
+      { threshold: 0.2 }, //% viewable
     );
 
     this.sections.forEach((section) => {
