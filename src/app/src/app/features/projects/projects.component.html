@@ -38,11 +38,13 @@
     </app-section-block>
 
     <app-section-block [id]="tabs[2]">
-      <h2>Tech Stack:</h2>
       <div class="stack-container">
-        @for (tech of selectedProduct.techStack; track $index) {
-          <div class="tech-tag">{{ tech }}</div>
-        }
+        <h2>Tech Stack</h2>
+        <div class="stack-display">
+          @for (tech of selectedProduct.techStack; track $index) {
+            <div class="tech-tag">{{ tech }}</div>
+          }
+        </div>
       </div>
     </app-section-block>
 
