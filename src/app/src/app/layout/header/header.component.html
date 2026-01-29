@@ -11,9 +11,47 @@
         [routerLinkActiveOptions]="{ exact: true }"
         >Home</a
       >
-      <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+      <div
+        class="nav-dropdown"
+        (keypress)="showDropdown = !showDropdown"
+        (click)="showDropdown = !showDropdown"
+      >
+        <a>
+          Portfolio
+          <span class="arrow" [class.rotate]="showDropdown">▼</span>
+        </a>
+
+        @if (showDropdown) {
+          <ul class="dropdown">
+            <li>
+              <a
+                routerLink="/portfolio/goldmine"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >Goldmine</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="/portfolio/ultraphone"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >Ultraphone</a
+              >
+            </li>
+            <li>
+              <a
+                routerLink="/portfolio/steve"
+                routerLinkActive="active"
+                class="dropdown-item"
+                >Steve</a
+              >
+            </li>
+          </ul>
+        }
+      </div>
+
       <a routerLink="/resume" routerLinkActive="active">Resume</a>
-      <!-- <a routerLink="/about" routerLinkActive="active">About</a> -->
     </nav>
   </div>
 </header>
