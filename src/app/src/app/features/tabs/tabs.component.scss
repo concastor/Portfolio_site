@@ -1,0 +1,43 @@
+.tab-container {
+  gap: 2rem;
+  display: flex;
+  justify-content: space-around;
+  position: sticky;
+  z-index: 100;
+  top: 0px;
+  padding: 1rem 20vw;
+  background-color: #ffffff;
+
+  &.is-stuck {
+    border-bottom: 2px solid black;
+  }
+
+  .tab {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0;
+    font-size: larger;
+    position: relative;
+    letter-spacing: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: var(--primary-color);
+      transform: translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &.active::after {
+      width: 100%;
+    }
+  }
+}

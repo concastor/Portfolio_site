@@ -1,14 +1,17 @@
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { projects } from '../../shared/constants/projects';
+import { TabsComponent } from '../tabs/tabs.component';
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule],
+  imports: [CommonModule, TabsComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
+  private readonly viewportScroller = inject(ViewportScroller);
+
   selectedProduct: any;
   productName = 'goldmine';
   projects: any[] = [
@@ -21,7 +24,7 @@ export class ProjectsComponent implements OnInit {
   ];
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly router: Router
+    private readonly router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -35,5 +38,21 @@ export class ProjectsComponent implements OnInit {
 
   goToProject(selected: ''): void {
     this.router.navigate(['/portfolio', selected]);
+  }
+
+  //tab scrolling information
+  tabs = [
+    'Home',
+    'Problem',
+    'Tech Stack',
+    'Features',
+    'My Contribution',
+    'Results',
+  ];
+
+  activeSection: string = this.tabs[0];
+
+  scrollToSection(section: string) {
+    this.viewportScroller.scrollToAnchor(section);
   }
 }

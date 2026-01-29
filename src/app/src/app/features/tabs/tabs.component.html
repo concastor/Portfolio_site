@@ -1,0 +1,11 @@
+<div class="tab-container" #stickyElement>
+  @for (tab of tabs(); track tab) {
+    <button
+      class="tab"
+      [class.active]="selectedTab() === tab"
+      (click)="selected(tab)"
+    >
+      {{ tab }}
+    </button>
+  }
+</div>
