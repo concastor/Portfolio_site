@@ -34,8 +34,6 @@
   flex-direction: column;
 
   .title-header {
-    // border: 1px solid black;
-    // border-radius: 2rem;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -55,6 +53,26 @@
     }
     .header-icon {
       width: 40%;
+    }
+  }
+
+  .problem-container {
+    flex: 1 1 0px;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .problem-display {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2rem;
+      :last-child {
+        font-size: 1.5em;
+        padding-left: 2rem;
+        border-left: 2px solid var(--background-color);
+      }
     }
   }
 
