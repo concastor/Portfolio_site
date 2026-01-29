@@ -4,8 +4,8 @@
     [selectedTab]="activeSection"
     (sectionSelected)="scrollToSection($event)"
   />
-  <div class="portfolio-container">
-    <app-section-block [id]="tabs[0]">
+  <div class="portfolio-container" [id]="tabs[0]">
+    <app-section-block>
       <div class="title-header">
         <div>
           <div class="title">{{ selectedProduct.title }}</div>
@@ -93,12 +93,14 @@
       </div>
     </app-section-block>
     <app-section-block [id]="tabs[5]" type="primary">
-      <h2>Results:</h2>
-      <ul>
-        @for (result of selectedProduct.result; track $index) {
-          <li>{{ result }}</li>
-        }
-      </ul>
+      <div class="results-section">
+        <h2>Results</h2>
+        <ul>
+          @for (result of selectedProduct.result; track $index) {
+            <li>{{ result }}</li>
+          }
+        </ul>
+      </div>
     </app-section-block>
   </div>
 }
