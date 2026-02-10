@@ -12,22 +12,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
   }
 
   .homeButton {
+    margin-right: 1em;
     a {
-      font-size: 1.5rem;
+      font-size: clamp(0.75rem, 5vw, 1.5rem);
       font-weight: bold;
       color: var(--background-color);
-
       text-decoration: none;
       cursor: pointer;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .mobile {
+      display: none;
+    }
+
+    @media (max-width: 500px) {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: inline;
+      }
     }
   }
 
   .nav {
     display: flex;
     gap: 2rem;
+
+    @media (max-width: 768px) {
+      gap: 1rem;
+    }
 
     .nav-dropdown {
       position: relative;
@@ -75,12 +94,13 @@
       }
 
       .dropdown-item:hover {
-        // background-color: #f5f5f5;
         color: var(--secondary-color);
       }
     }
 
     a {
+      font-size: clamp(0.75rem, 4vw, 1rem);
+
       color: var(--background-color);
       text-decoration: none;
       font-weight: 500;
