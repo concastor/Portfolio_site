@@ -5,10 +5,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
-    selector: 'app-login',
-    imports: [CommonModule, FormsModule],
-    templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+  selector: 'app-login',
+  imports: [CommonModule, FormsModule],
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   password = '';
@@ -16,9 +16,9 @@ export class LoginComponent {
   returnUrl = '/';
 
   constructor(
-    private authService: AuthService,
-    private router: Router,
-    private route: ActivatedRoute
+    private readonly authService: AuthService,
+    private readonly router: Router,
+    private readonly route: ActivatedRoute,
   ) {
     // Get the return URL from query params or default to '/'
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
