@@ -1,18 +1,27 @@
 .home-container {
-  padding: 0 5rem;
+  padding: 0 8vw;
   color: var(--primary-color);
   margin-bottom: 5rem;
   .section {
-    margin: 10rem;
+    margin: clamp(0rem, 7vw, 10rem);
   }
+
+  @media (max-width: 768px) {
+    .section {
+      margin: 5rem 0;
+    }
+  }
+
   h1 {
-    font-size: 4rem;
+    font-size: var(--header-font-size);
+    width: 100%;
   }
   .subtitle {
-    font-size: 3rem;
+    font-size: var(--sub-header-font-size);
   }
 
   .sub-section {
-    font-size: 2rem;
+    font-size: var(--avg-font-size);
+    // font-size: 2rem;
   }
 }
